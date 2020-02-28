@@ -65,7 +65,7 @@ async function addCsvByUrl(map, url, tableNumericField) {
         })
         
         if (!tableNumericField) {
-            console.log(`Couldn't find a numeric field out of ${columnNames}. Exiting.`);
+            throw 'error',`Couldn't find a numeric field out of ${columnNames}. Exiting.`;
             return;
             // tableNumericField = columnNames.find(c => !regionTypeAliases[c.toLowerCase()])
         }
